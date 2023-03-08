@@ -1,0 +1,140 @@
+
+
+
+.sidebarRight__container{
+    position: relative;
+    display: none;
+}
+.sidebarRight__container.active{
+    display: block;
+}
+
+.sidebarRight{
+    /* background: var(--color-white); */
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: var(--padding) ;
+    padding-left: 0;
+}
+.sidebarRight h4{
+    padding: 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.shortCut__items{
+    height: max-content;
+    max-height:120px;
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.shortCut__items::-webkit-scrollbar{
+    display: block !important;
+    width: 2px;
+    height: 1px;
+    background-color: rgb(75, 44, 44);
+}
+.shortCut__item{
+    padding: 6px 12px ;
+    background: var(--color-white);
+    color: var(--color-black);
+    font-weight: 500;
+    font-size: 13px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+/* ======================= */
+.FavArtist{
+
+}
+.FavArtist h4{
+    padding: var(--padding) 0;
+}
+.FavArtist__items{
+    
+    max-height: 140px;
+    overflow: hidden;
+
+}
+.FavArtist__item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+
+}
+
+.FavArtist__item img{
+    width: 36px ;
+    height:36px;
+    border-radius: 50%;
+}
+.FavArtist__item-text h5{
+    line-height: 100%;
+    margin: 0;
+    font-weight: 600;
+}
+.FavArtist__item-text small{
+    color: var(--color-gray
+    ) ;
+}
+.FavArtist__item-icons{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.FavArtist__viewMore{
+   float: right;
+   font-size: 12px;
+   cursor: pointer;
+
+}
+.FavArtist__viewMore:hover{
+    color: var(--color-primary);
+
+}
+
+
+.currentSong{
+   background: var(--color-white);
+   margin-top: 30px;
+   padding: 8px;
+   position: absolute;
+   right: var(--padding);
+   left: 0;
+   bottom: var(--padding);
+   border-radius: 12px;
+   z-index: 10;
+
+}
+.currentSong__image{
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: 100% 100%;
+    margin-bottom: 6px;
+}
+.currentSong__image img{
+    background-size: 100% 100%;
+}
+.currentSong__name-singer{
+    line-height: 100%;
+    font-weight: 600;
+    font-size: 14px;
+}
+.currentSong__name-song{
+    font-size: 12px;
+    color: var(--color-gray);
+}
+

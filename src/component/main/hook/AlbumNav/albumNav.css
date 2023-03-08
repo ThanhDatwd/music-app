@@ -1,0 +1,85 @@
+
+.albumNav{
+    padding:10px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    border-bottom: 0.5px solid rgba(55, 55, 55, 0.296);
+    cursor: pointer;
+  }
+  .albumNav-left,
+  .albumNav-right{
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .albumNav-left__sort,
+  .albumNav-left__check{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .albumNav-left__sort div{
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .option-sort{
+    position: absolute;
+    left: 0;
+    top: calc(100% + 8px);
+    padding: 4px 8px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 8px;
+    width: max-content;
+    z-index: 1000;
+  }
+  .option-sort::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border: 10px solid;
+    border-color: transparent transparent var(--color-primary) transparent;
+    bottom: 100%;
+  }
+  .option-sort li{
+     padding: 6px;
+     border-radius: 8px;
+     font-size: 12px;
+  }
+  .option-sort li:hover{
+    background: var(--color-white);
+    color: var(--color-primary);
+  }
+  .albumNav-left__check input{
+    cursor: pointer;
+  }
+  .albumNav-left__sort .icon-sort{
+    border: 1px solid var(--color-gray);
+    border-radius: 3px;
+  }
+
+  .albumNav-left__addPlaying{
+    display: flex;
+    align-items: center;
+    padding: 2px 10px;
+    border: 1px solid var(--color-gray);
+    border-radius: 16px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .albumNav-left__addPlaying .icon{
+    font-size: 16px;
+  }
+  .albumNav-left__orther{
+    padding: 4px;
+    font-size: 22px;
+    font-weight: 500;
+    border: 1px solid var(--color-gray);
+    border-radius: 50%;
+  }

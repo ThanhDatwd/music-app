@@ -1,0 +1,98 @@
+.loginApp{
+    position: fixed;
+    top:0;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f2ea;
+    z-index: 1000;
+}
+.loginApp__navbar{
+    position: absolute;
+    top: 20px;
+    width: calc(100% - 60px);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.loginApp__navbar-action{
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.loginApp .btn-primary{
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+}
+
+#formAuth{
+    padding: 30px ;
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.116);
+    width: 500px;
+}
+#formAuth .formAuth__header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#formAuth .formAuth__header h3{
+
+}
+.form-group{
+    margin-bottom: 16px;
+    width: 100%;
+}
+.form-group .error-message{
+    margin-top: 4px;
+    color: rgb(238, 50, 50);
+    font-size: 12px;
+}
+.loginApp input,
+.loginApp button{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.loginApp button{
+    cursor: pointer;
+}
+
+
+.other-select h4{
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.other-select h4::after{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 2px;
+    background: red;
+    display: block;
+}
+.select-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 8px;
+    cursor: pointer;
+}
+.select-rigister{
+    text-align: center;
+    margin-top: 20px;
+}
+.select-rigister strong{
+    cursor: pointer;
+    color: var(--color-primary);
+}

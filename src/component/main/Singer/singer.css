@@ -1,0 +1,175 @@
+.artist-hero {
+    padding-bottom: var(--padding);
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-columns: 60% 40%;
+}
+
+.artist-btn {
+    margin: var(--padding) 0;
+    display: flex;
+    gap: 10px;
+}
+.artist-btn .btn{
+    border-radius: 30px !important;
+    padding :4px 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-biography {
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.artist-lastSong {
+    width: 50%;
+}
+
+.artist-image {
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    margin-left: 50px;
+}
+
+.artist-image img {
+    width: 100%;
+    height: 100%;
+}
+
+/* =============================== */
+.mymusic__navbar {
+    text-align: center;
+    margin: var(--padding) 0;
+}
+
+.mymusic__navbar-menu {
+    margin: auto;
+    padding: 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    background: linear-gradient(-125deg, var(--color-primary), rgba(104, 4, 101, 0.9));
+    border-radius: 16px;
+}
+
+.mymusic__navbar-menu li {
+    color: var(--color-black);
+    min-width: 120px;
+    border-radius: 12px;
+    padding: 2px;
+    font-weight: 600;
+
+}
+
+.mymusic__navbar-menu li.active {
+    background: rgba(0, 0, 0, 0.4);
+
+}
+
+/* ==================================== */
+.song-of-singer {
+    display: grid;
+    grid-template-columns: 32% 68%;
+}
+
+.song-of-singer__list {
+    margin-left: 50px;
+    /* max-height: 300px; */
+    /* overflow: auto; */
+    
+}
+
+.song-of-singer__list::-webkit-scrollbar {
+    display: flex !important;
+    width: 3px;
+}
+
+.song-of-singer__list::-webkit-scrollbar-thumb {
+    background: var(--color-linear);
+    height: 5px;
+}
+
+
+.song-of-singer__slide {
+    padding-left: 30px;
+}
+
+.slide-song-card {
+    height: 280px;
+    background: var(--color-linear);
+    border-radius: 8px;
+    overflow: hidden;
+    background-size: cover;
+    padding: 20px 0;
+}
+
+.slide-song-card img {
+
+    height: 100%;
+    object-fit: fill;
+}
+
+
+/*    PHẦN CSS DANH SÁCH ALBUM CỦA CA SĨ */
+.album-of-singer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.mv-of-singer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+
+@media screen and (max-width:624px) {
+    .artist-hero {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .artist-image {
+        position: relative;
+        width: 100%;
+        margin: 0 0 var(--padding) 0;
+        border-radius: 2px;
+        height: 40vh;
+        /* aspect-ratio: 4/2; */
+    }
+
+    .artist-image img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .artist-btn {
+        justify-content: center;
+    }
+
+    .artist-lastSong {
+        width: 100%;
+    }
+
+    .song-of-singer{
+        grid-template-columns: 100%;
+
+    }
+    .slideSongOfSinger{
+        display: none;
+    }
+    .song-of-singer__list{
+        margin: 0;
+        max-height: max-content;
+    }
+}

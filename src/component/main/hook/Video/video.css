@@ -1,0 +1,106 @@
+
+
+.videos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.video{
+    width: 100%;
+}
+.video__thumb{
+    position: relative;
+    width: 100%;
+    /* height: auto; */
+    aspect-ratio: 3/2;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.video__thumb .video-icon-play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+
+    font-size: 3vw;
+    color: var(--color-primary);
+    cursor: pointer;
+    display: none;
+
+}
+.video__thumb .video-icon-close{
+    position: absolute;
+    top: 8px ;
+    right: 8px;
+    color: var(--color-primary);
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+.video__thumb:hover img{
+    filter: brightness(0.7);
+    transform: scale(1.1);
+}
+.video__thumb:hover .video-icon-play,
+.video__thumb:hover .video-icon-close{
+    display: block;
+}
+.video__thumb .video__duration{
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 0 4px;
+    border-radius: 4px;
+    background: rgba(109, 109, 109, 0.391);
+    color: var(--color-primary);
+}
+.video__content{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.video__content-text{
+    line-height: 1;
+}
+.video__content-text h4{
+    overflow: hidden;
+    display: block;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.video__content-text .auth-list{
+    overflow: hidden;
+    display: inline-block;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.video__content-avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.video__content-avatar img{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width:624px) {
+    .video__thumb{
+        border-radius: 4px;
+    }
+    .video__content-avatar{
+        width: 30px;
+        height: 30px;
+    }
+    .video__content-text h4{
+        font-size: 12px;
+        margin-bottom:3px;
+    }
+    .video__content-text .auth-list{
+        font-size: 11px;
+    }
+}

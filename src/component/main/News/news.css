@@ -1,0 +1,19 @@
+.news-page{
+    padding: 15px;
+	-moz-column-count: 2;
+	-moz-column-gap: 10px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 10px;
+	column-count: 2;
+	column-gap: 10px;
+	width: 100%;
+}
+.news-page .post-item{
+    width: 100% !important;
+	display: inline-block !important;
+	margin-top: 0px !important;
+	-webkit-column-break-inside: avoid !important;
+	page-break-inside: avoid !important;
+	break-inside: avoid-column !important;
+    margin-bottom: var(--padding);
+}

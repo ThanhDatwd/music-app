@@ -1,0 +1,47 @@
+
+
+.app.container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 18% 64% 18%;
+
+}
+.app__logo{
+    padding: var(--padding);
+    padding-left: calc(var(--padding) + 16px);
+    
+}
+
+.box-emty{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    margin: 16px 0;
+}
+.box-emty img{
+    width: 120px;
+    height: 120px;
+}
+.grid-slide{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+} 
+@media screen and (max-width:624px) {
+    .app.container{
+        grid-template-columns: 100%;
+    }
+    .grid-slide{
+        grid-template-columns: unset;
+        grid-auto-flow: column;
+        grid-auto-columns: 80%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory; 
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-stop: always;
+        display: grid !important;
+    } 
+  
+}  

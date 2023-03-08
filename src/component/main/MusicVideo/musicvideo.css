@@ -1,0 +1,238 @@
+
+
+.music-video-page{
+ position: fixed ;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+padding: var(--padding) ;
+display: flex;
+flex-direction: column;
+/* position: relative; */
+width: 100%;
+height: 100vh;
+overflow: auto;
+
+ z-index: 100;
+ background-color: var(--color-black);
+ animation: music-video-page 0.3s linear;
+}
+@keyframes music-video-page {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 0;
+    }
+}
+.music-video__container{
+    width: 100%;
+    height: max-content !important;
+}
+.music-video__main{
+    width: 100%;
+    height: 96vh;
+    display: grid;
+    grid-template-columns: calc(75% - 10px) calc(25% - 10px) ;
+    gap: 20px;
+}
+.video-play{
+    display: flex;
+    flex-direction: column;
+}
+.music-video-page .artist-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: var(--color-white);
+}
+.music-video-page .artist-info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 48px;
+}
+.music-video-page .artist-info h4{
+    margin: 0;
+    color: var(--color-white);
+
+}
+.music-video-page .artist-action{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.artist-action button{
+    background: var(--color-primary);
+    padding:6px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.artist-action .icon-close{
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(117, 117, 117, 0.404);
+    color: var(--color-white);
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+}
+.song-main{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 6px;
+    background: rgba(117, 117, 117, 0.404);
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+.video-main{
+    width: 100%;
+    /* aspect-ratio: 16/8; */
+    border-radius: 6px;
+    height: 100%;
+    background: var(--color-primary);
+    margin-bottom: 10px;
+}
+.video-main__control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 6px;
+    gap: 10px;
+    background: rgba(117, 117, 117, 0.404);
+    color: var(--color-white);
+    font-size: 22px;
+}
+.video-main__control .icon{
+    cursor: pointer;
+}
+.video-main__progress-bar {
+    width: 100%;
+}
+.video-main__progress-bar input{
+    width: 100%;
+
+}
+.video-main-right{
+    display: flex;
+    flex-direction: column;
+}
+.video-main-right .close-bar{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 10px;
+    text-align: right !important;
+    
+}
+.video-main-right .close-bar .icon{
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(117, 117, 117, 0.404);
+    color: var(--color-white);
+    font-size: 40px;
+    cursor: pointer;
+}
+/* PHẦN COMMENT CỦA BÀI HÁT  */
+.video-comment{
+    position: relative;
+    background: rgba(91, 90, 90, 0.404);
+    height: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+.video-comment__header{
+    padding: 8px 0;
+    color: var(--color-white);
+    border-bottom: 1px solid var(--color-primary);
+    margin-bottom: 10px;
+}
+.video-comment__write{
+   width: 100%;
+   margin: auto;
+   padding: 10px;
+   border-radius: 6px;
+   background: rgba(117, 117, 117, 0.404);
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+.video-comment__write input{
+  width: 100%;
+  background: transparent;
+  color: var(--color-white);
+}
+.video-comment__write .icon{
+    cursor: pointer;
+    font-size: 26px;
+    color: var(--color-primary);
+}
+
+.video-comment__read{
+   height: 440px;
+   max-height: 100%;
+   overflow: auto;
+}
+.video-comment__read-item{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.video-comment__read-item .avatar{
+    background: red;
+    /* height: 10px; */
+}
+.video-comment__read-item .content{
+    width: 80%;
+}
+.video-comment__read-item .content p{
+    padding: 8px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    border-radius: 6px;
+    background: rgba(117, 117, 117, 0.404);
+    color: var(--color-white);
+}
+.video-comment__read-item .content span{
+    color: var(--color-primary);
+}
+.video-comment__read-item .content .author{
+    color: var(--color-white);
+    margin-right: 10px;
+}
+.music-video__list{
+    width: 100%;
+}
+.mvOfSinger{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+/* PHẦN REPONSIVE */
+@media screen and (max-width:624px) {
+    .music-video__main{
+        grid-template-columns: 1fr;
+        height: max-content;
+    }
+    .video-main-right .close-bar{
+        display: none;
+    }
+    .artist-action .icon-close{
+        display: block;
+    }
+    .video-comment__read{
+        height: 380px;
+    }
+ }  

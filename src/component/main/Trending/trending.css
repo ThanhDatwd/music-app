@@ -1,0 +1,38 @@
+
+
+.chart{
+    /* background: var(--color-); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lineChart{
+    width: 100%;
+}
+.bxh_week{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.bxh{
+    width: 100%;
+    padding: 16px 10px;
+    background: var(--color-white);
+    border-radius: 8px;
+}
+.bxh header{
+   display: flex;
+   align-items: center;
+   font-size: 20px;
+   gap: 10px;
+}
+.bxh header h3{
+    margin: 0;
+}
+.bxh header .bxh-icon{
+    color: var(--color-primary);
+}
+.bxh footer{
+    margin-top: 16px;
+    text-align: center;
+}

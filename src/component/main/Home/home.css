@@ -1,0 +1,117 @@
+
+
+
+.slide{
+    background: forestgreen;
+    aspect-ratio: 4/2;
+    margin: 16px 0 0 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.side img{
+    width: 100%;
+    height:100%;
+    background-size: cover;
+}
+
+.grid-slide{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+} 
+.grid-slide .playlist-item:nth-child(1n + 5){
+    display: none;
+}
+
+.recently .grid-slide{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.recently .grid-slide .playlist-item:nth-child(1n){
+    display: block !important;
+}
+.recently .grid-slide .playlist-item:nth-child(1n + 7){
+    display: none !important;
+}
+.newRelease-desktop{
+
+}
+.newRelease-mobile{
+    display: none !important;
+}
+.newRelease .grid-slide{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-auto-flow: column; */
+
+}
+.newRelease .grid-slide .songCard:nth-child(1n + 4){
+    display: none ;
+}
+.newReleaseMb{
+    display: none;
+}
+.home-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+}
+.home-section .playlist-item:nth-child(1n + 5){
+    display: none;
+}
+.home-videos .video:nth-child(1n + 4){
+    display: none;
+}
+
+@media screen and (max-width:624px) {
+    .newRelease .grid-slide,
+    .grid-slide{
+        grid-template-columns: unset;
+        grid-auto-flow: column;
+        grid-auto-columns: 80%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory; 
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-stop: always;
+        display: grid !important;
+    } 
+    .recently .grid-slide{
+        grid-template-columns: unset;
+        grid-auto-flow: column;
+        grid-auto-columns: 40%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory; 
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-stop: always;
+    }
+    /* .home-section .playlist-item:nth-child(1n), */
+    .grid-slide .playlist-item:nth-child(1n){
+        display: block;
+    } 
+    .home-section{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .newRelease-desktop{
+        display: none !important;
+    }
+    
+    .newRelease .grid-slide .songCard:nth-child(1n + 4){
+        display: grid;
+    }
+    .newReleaseMb{
+        display: block;
+    }
+    .home-videos.videos{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .home-videos:nth-child(1n + 5){
+        display: none;
+    }
+    
+  
+}  

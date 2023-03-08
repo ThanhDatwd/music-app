@@ -1,0 +1,164 @@
+
+
+.sideBarLeft__container{
+     position: relative;
+     
+    }
+.sideBarLeft{
+    background: var(--color-white);
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: var(--padding) 0;
+}
+.sideBarLeft_close{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+/*    PHẦN CSS CHO MENU CHÍNH  */
+
+.menu__item{
+    position: relative !important;
+    padding: 0  40px 0 0 !important;
+    transition: var(--transition);
+    cursor: pointer;
+
+}
+.menu__item li{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 8px 16px ;
+    border-radius: 12px;
+    transition: var(--transition);
+
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-black) ;
+    
+
+}
+.menu__item::after{
+    content: '';
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 2px;
+    background: var(--color-black);
+    transition: var(--transition);
+}
+.menu__item:hover li{
+    background: var(--color-black);
+    transition: var(--transition);
+    color: var(--color-white);
+
+
+}
+.menu__item:hover::after{
+    display: block;
+    transition: var(--transition);
+
+}
+
+
+.menuMain{
+    padding-left: var(--padding);
+}
+
+.menuCollection{
+    padding-left: var(--padding);
+
+}
+.menuCollection h4{
+    padding: 8px 16px;
+    color: var(--color-gray);
+}
+
+/* ========================================= */
+
+.sideBarLeft__user{
+    position:absolute ;
+    bottom:0 ;
+    right:  0;
+    width: 100%;
+    
+}
+.user{
+    position: relative;
+    padding:var(--padding);
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid var(--color-gray);
+    cursor:  pointer;
+    
+}
+.user .user__info{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding-left: 8px;
+}
+.user img{
+    width: 40px ;
+    height: 40px;
+    border-radius: 50%;
+}
+.user__detail{
+    width: 100%;
+    /* height:max-content; */
+     height :20px;
+    background: var(--color-white);
+    box-shadow: 0px 0px 3px rgba(43, 42, 42, 0.487);
+    border-radius: 6px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 100%;
+}
+
+
+/* PHẦN REPONSIVE */
+@media screen and (max-width:624px) {
+    .sideBarLeft__container{
+        position: fixed;
+        width: 70%;
+        top: 0;
+        left: 0;
+        background: red;
+        z-index: 100;
+        transition: var(--transition);
+        left: -100%;
+   }
+   .sideBarLeft__container.active{
+    position: fixed;
+    width: 70%;
+    top: 0;
+    left: 0;
+    background: red;
+    z-index: 100;
+    transition: var(--transition);
+    left: 0%;
+    }
+   .sideBarLeft_close{
+       display: block;
+   }
+   .menu__item li{
+       font-size: 16px;
+       text-transform: uppercase;
+   }
+  
+}  

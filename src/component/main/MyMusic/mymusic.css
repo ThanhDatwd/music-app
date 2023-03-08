@@ -1,0 +1,144 @@
+
+
+.mymusic{
+}
+.user-profile{
+   position: relative;
+}
+.user-profile__actions{
+   position: absolute;
+   right: 0;
+   top: 0;
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+.user-profile__actions button{
+    padding: 4px 16px;
+    font-size: 12px;
+}
+.user-profile__actions .vip-btn{
+    background: var(--color-yellow);
+    color: var(--color-black);
+}
+.user-profile__container{
+    text-align: center;
+    padding-bottom: 40px;
+}
+.user-profile__container .avatar{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user-profile__container .title{
+    font-size: 20px;
+    margin: 10px 0;
+}
+.mymusic__navbar{
+    text-align: center;
+}
+.mymusic__navbar-menu{
+    margin: auto;
+    padding: 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    background: linear-gradient(-125deg, var(--color-primary),rgba(104, 4, 101, 0.9));
+    border-radius: 16px;
+}
+.mymusic__navbar-menu li{
+    color: var(--color-black);
+    min-width: 120px;
+    border-radius: 12px;
+    padding: 2px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.mymusic__navbar-menu li.active{
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--color-white);
+
+}
+
+
+/*  PLAYLIST */
+
+.mymusic .playlist{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.playlist-item.add{
+    background: var(--color-linear);
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* PHẦN CSS CHO FROM THÊM PLAYLIST */
+.formAddPlaylist{
+    position: relative;
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--color-white);
+}
+.formAddPlaylist .btnClose{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.title{
+    text-align: center;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.formAddPlaylist input{
+    padding: 8px 16px;
+    background: var(--color-bg);
+    width: 100%;
+    border: 1px solid var(--color-primary);
+    border-radius:16px;
+}
+.formAddPlaylistCheck{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 16px 0;
+    cursor: pointer;
+}
+.formAddPlaylistCheck h4{
+    margin: 0;
+}
+.formAddPlaylistCheck span{
+    font-size: 12px;
+    color: var(--color-gray);
+}
+.formAddPlaylistCheck .btnCheckIcon{
+    font-size: 22px;
+    color: var(--color-primary);
+}
+.formAddPlaylist .btnCreate{
+    width: 100%;
+    background: var(--color-primary);
+    margin-top: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.formAddPlaylist .btnCreate[disabled]{
+    cursor: not-allowed;
+    opacity: .5;
+}
+.mymusic .videos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}

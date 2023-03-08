@@ -1,0 +1,10 @@
+
+.newSongs__items::-webkit-scrollbar{
+    display: block !important;
+    width: 6px;
+    background: #1dc186
+}
+.newSongs__items ::-webkit-scrollbar-thumb {
+    background: #1dc186;
+    border-radius: 4px;
+}
